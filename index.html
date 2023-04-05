@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>PhotoHub</title>
 </head>
+
 <body>
-    
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#home">PHOTOHUB</a>
+              <button class="navbar-toggler dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#potraitphotogrid">Phone Wallpaper</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#landscapephotogrid">PC Wallpaper</a>
+                  </li>
+                
+                </ul>
+                <form class="d-flex" role="search" id="search-form">
+                  <input class="form-control me-2" type="text" name="search-input" id="search-input" placeholder="Search" aria-label="search-form">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <div class="searchresults row" id="searchresults"></div>
+        <div class="main">
+            <section>
+
+                <div class="row" id="home">
+                    <div class="col-md-12">
+                        <div class="hero">
+                            <h1>PhotoHub</h1>
+                            <p> The Home of free wallpaper</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2 id="potraitphotogrid">Phone Wallpaper</h2>
+                <div  class="row photogrid">
+
+                </div>
+            </section>
+            <section>
+                <h2 id="landscapephotogrid" >PC Wallpaper</h2>
+                <div class="row landscapephotogrid">
+
+                </div>
+            </section>
+        </div>
+
+    </div>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="./index.js"></script>
+
 </html>
