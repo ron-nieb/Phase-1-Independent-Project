@@ -166,7 +166,7 @@ form.addEventListener('submit', event => {
 
 
   const contactform = document.querySelector('.contactform')
-
+// Event listener for submit contact form
   contactform.addEventListener('submit', ()=> {
     // Get the contuctus form data
     const name = document.getElementById("name").value;
