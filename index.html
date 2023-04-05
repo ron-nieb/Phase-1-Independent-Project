@@ -30,7 +30,7 @@
                 
                 </ul>
                 <form class="d-flex" role="search" id="search-form">
-                  <input class="form-control me-2" type="text" name="search-input" id="search-input" placeholder="Search" aria-label="search-form">
+                  <input class="form-control me-2" type="text" name="search-input" id="search-input" placeholder="Search" aria-label="search-form" required>
                   <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
               </div>
@@ -61,6 +61,30 @@
 
                 </div>
             </section>
+            <div class="contactUs row">
+              <div class="col-md-6"></div>
+              <div class="col-md-6">
+                <form method="post" class="contactform">
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name='name' aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Enter your firstname and lastname</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea type="text" class="form-control" id="message" name='message' aria-describedby="emailHelp"> </textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                
+              </div>
+            </div>
         </div>
 
     </div>
