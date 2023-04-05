@@ -53,6 +53,20 @@ h2 {
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow: auto;
+    border-radius: 5px;
 }
 
 
+
+#searchresults>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+#searchresults>:hover img {
+    transform: scale(1.09);
+  }

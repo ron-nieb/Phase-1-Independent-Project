@@ -2,7 +2,6 @@
 // replace with your own Unsplash API access key
 const ACCESS_KEY = 'LbC4DJI24jq3xMS0uJagmQX_b_7apVmKxJNLIzqSM8Q';
 
-const SECRET_KEY ='pYdVd0w8inmb6EwnimScx1sfGHLYRQZC8m1_DVVsEJc'
 // search term for photos
 const query = 'wallpaper';
 
@@ -26,10 +25,11 @@ async function getPhotos() {
     const response2 = await fetch(url2);
     const data2 = await response2.json();
     const data = await response.json();
+    //from json to an array
     const photos = data.results;
     const landscapephotos = data2.results
 
-    // iterate over each photo and create an image element
+    // iterate over each photo and create an image element to display 
     photos.forEach(photo => {
       const div = document.createElement('div');
       div.className = 'col-md-3 card';
@@ -71,7 +71,7 @@ async function getPhotos() {
     console.error(error);
   }
 }
-
+//function call 
 getPhotos();
 
 // navigation bar search form 
@@ -80,7 +80,7 @@ const container = document.querySelector('.searchresults');
 const form = document.getElementById('search-form');
 
 async function getSearchPhotos(query, count) {
-  const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=${5}&client_id=${ACCESS_KEY}`;
+  const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=${7}&client_id=${ACCESS_KEY}`;
   try {
     const response = await fetch(url);
     const data = await response.json();
