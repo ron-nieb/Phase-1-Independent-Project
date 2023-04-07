@@ -164,13 +164,13 @@ try {
   function submitcontactform(contact) {
 
     // Send the contact object to the server using the Fetch API
-    fetch(' http://localhost:3000/', {
+    fetch(' http://localhost:3000/UserMessageData', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(contact)
-    })
+    },false)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -194,11 +194,12 @@ try {
 
 const contactform = document.querySelector('.contactform')
 // Event listener for submit contact form
-contactform.addEventListener('submit', () => {
+contactform.addEventListener('submit', (event) => {
   // Get the contuctus form data
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
+ 
 
   // Create a new contact object
   const contact = {
@@ -206,6 +207,9 @@ contactform.addEventListener('submit', () => {
     email: email,
     message: message
   };
+   event.preventDefault()
 
   submitcontactform(contact)
+  event.preventDefault()
+ 
 })
