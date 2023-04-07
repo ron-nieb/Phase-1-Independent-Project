@@ -108,7 +108,13 @@ async function getSearchPhotos(query) {
     // create a div for each photo and add it to the container
     photos.forEach(photo => {
 
-  
+
+
+
+
+
+      div.innerHTML += photo_card;
+      container.appendChild(div);
     });
 
     // create a cancel button to close the container
