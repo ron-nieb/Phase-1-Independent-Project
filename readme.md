@@ -1,5 +1,5 @@
 # PhotoHub
-PhotoHub is a web page that allows users to search and view photos. The page includes a navbar with links to different sections of the page and a search form for finding photos.
+PhotoHub is a web page that allows users to search and view wallpapers. The page includes a navbar with links to different sections of the page and a search form for finding wallpapers.
 
 ## Usage
 Open the index.html file in a web browser to view the page.
