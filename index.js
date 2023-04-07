@@ -108,9 +108,20 @@ async function getSearchPhotos(query) {
     // create a div for each photo and add it to the container
     photos.forEach(photo => {
 
+      img_url = photo.urls.regular;
+      img_title = photo.alt_description;
+      img_description = photo.descpription;
+      const div = document.createElement('div');
+      div.className = 'searchphoto col-md-3';
 
-
-
+      const photo_card = `<div class="card" style="width: 18rem;">
+      <img src=${img_url} class="card-img-top img-fluid " id= "card-img-top" alt="..."></img>
+      <div class="card-body">
+        <h5 class="card-title">${img_title}</h5>
+        <p class="card-text">${img_description}</p>
+        
+      </div>
+    </div>`;
 
 
       div.innerHTML += photo_card;
