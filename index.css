@@ -5,18 +5,25 @@ nav {
     overflow-x: hidden;
 
 }
-#gridimg{
-    margin: 10px;
+.pcphoto{
+    padding: 10px;
  
 }
 
-.col-md-3 {
+.phonephoto{
   
     justify-content: center;
     align-items: center;
     padding: 10px;
+
+}
+.card{
+    border-radius: 20px;
 }
 
+.card-img-top {
+    border-radius: 20px;
+}
 h2 {
     text-align: center;
     margin: 15px;
@@ -26,7 +33,7 @@ h2 {
 }
 
 
-.col-md-12 {
+.home {
     background-image: url('https://bit.ly/3m4ZkgZ');
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -90,5 +97,13 @@ h2 {
     cursor: pointer;
     align-items: end;
     
+    
+}
+
+.card-body{
+    display: none;
+}
+.card-img-top:hover + .card-body{
+    display: block;
     
 }
