@@ -48,12 +48,12 @@ async function getPhotos() {
 
       div.innerHTML += photo_card;
       landscapephotogrid.appendChild(div);
-    
+
 
     });
     if (landscapephotos) {
       landscapephotos.forEach(photo => {
-      
+
         img_url = photo.urls.regular;
         img_title = photo.alt_description;
         img_description = photo.descpription;
@@ -123,7 +123,6 @@ async function getSearchPhotos(query) {
       </div>
     </div>`;
 
-
       div.innerHTML += photo_card;
       container.appendChild(div);
     });
@@ -170,7 +169,7 @@ try {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(contact)
-    },false)
+    }, false)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -199,7 +198,7 @@ contactform.addEventListener('submit', (event) => {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
- 
+
 
   // Create a new contact object
   const contact = {
@@ -207,9 +206,9 @@ contactform.addEventListener('submit', (event) => {
     email: email,
     message: message
   };
-   event.preventDefault()
+  event.preventDefault()
 
   submitcontactform(contact)
   event.preventDefault()
- 
+
 })
